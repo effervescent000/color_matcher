@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Matcher</title>
+    {% from "_formhelpers.html" import render_field, render_field_no_label %}
+</head>
+<body>
+    <div class="page-container">
+        <div class="content-wrapper">
+            <div class="form-wrapper">
+                <form method="post">
+                    {{ form.hidden_tag() }}
+                    {{ render_field(form.hex_code) }}
+                    {{ render_field_no_label(form.submit) }}
+                </form>
+            </div>
+            <div class="checks-wrapper">
+                <a href="{{ url_for('check_integrity') }}">Check color list integrity</a>
+                <a href="{{ url_for('map_descriptions') }}">Map color descriptions</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

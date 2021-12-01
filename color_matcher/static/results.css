@@ -1,0 +1,11 @@
+.page-container .content-wrapper .colors-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.page-container .content-wrapper .colors-wrapper .color-box {
+  height: 100px;
+  width: 100px;
+}
+/*# sourceMappingURL=results.css.map */

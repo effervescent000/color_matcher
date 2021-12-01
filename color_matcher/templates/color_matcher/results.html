@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Results!</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='results.css') }}">
+</head>
+<body>
+    <div class="page-container">
+        <div class="content-wrapper">
+            <div class="colors-wrapper">
+                <div class="color-wrapper">
+                    <div class="color-box" style="background-color: {{ input_color }};"></div>
+                    <div class="color-labeling">{{ input_color }}</div>
+                </div>
+                <div class="color-wrapper">
+                    <div class="color-box" style="background-color: {{ matching_color_hex }};"></div>
+                    <div class="color-labeling">{{ matching_color_hex }} {{ matching_color_name }}</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
