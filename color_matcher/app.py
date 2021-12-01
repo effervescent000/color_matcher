@@ -5,6 +5,7 @@ from flask_wtf import FlaskForm
 from wtforms import StringField, SubmitField
 from webcolors import hex_to_rgb, rgb_to_hex
 
+
 color_data_indices = ["specific_name", "medium_name", "broad_name", "hex", "r", "g", "b"]
 color_data = read_csv("colordata.csv", names=color_data_indices, header=None)
 
@@ -12,8 +13,7 @@ description_indices = ["color_name", "hex_code", "r", "g", "b"]
 description_data = read_csv("color_match_data.csv", names=description_indices, header=None)
 
 app = Flask(__name__)
-# app.config.from_object('config.Config')
-app.config["SECRET_KEY"] = "dev"
+app.config.from_object('config.Config')
 
 
 class ColorInputForm(FlaskForm):
